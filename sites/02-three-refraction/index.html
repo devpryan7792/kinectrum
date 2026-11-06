@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 · THREE.JS OPTICAL REFRACTION // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="webgl-canvas"></canvas>
+    </div>
+
+    <div class="hud-overlay">
+      <header class="hud-header">
+        <div class="hud-brand">
+          <div class="hud-brand-title">THE KINETIC SPECTRUM // SPECIMEN 02</div>
+          <div class="hud-brand-sub">SUBSTRATE: WEBGL 2.0 PBR SPATIAL REFRACTION (THREE.JS)</div>
+        </div>
+
+        <div class="hud-controls">
+          <button class="btn-ctrl" id="btn-stress-toggle" title="Stress test 5 overlapping transmission glass bodies">⚡ 5-LAYER OVERDRAW STRESS</button>
+          <button class="btn-ctrl" id="btn-reset-cam">RESET CAMERA</button>
+        </div>
+      </header>
+
+      <div class="hud-center-crosshair"></div>
+
+      <footer class="hud-footer">
+        <div class="hud-spec-block">
+          <div>OPTICAL IOR: <b>1.52 (BOROSILICATE)</b></div>
+          <div>DISPERSION: <b>ABBE V_d = 64.2</b></div>
+          <div>DRAW CALL CEILING: <b>≤ 30 (INSTANCED & COMBINED)</b></div>
+        </div>
+
+        <div class="hud-sliders">
+          <div class="slider-unit">
+            <span>ROUGHNESS:</span>
+            <input type="range" id="slider-roughness" min="0.0" max="0.5" step="0.01" value="0.10" />
+          </div>
+          <div class="slider-unit">
+            <span>EXPOSURE:</span>
+            <input type="range" id="slider-exposure" min="0.5" max="2.0" step="0.05" value="1.1" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

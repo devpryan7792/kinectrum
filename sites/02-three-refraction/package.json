@@ -1,0 +1,21 @@
+{
+  "name": "@kinetic/site-02-three",
+  "version": "1.0.0",
+  "description": "Epoch 2: Three.js PBR Spatial Refraction (The Optical Borosilicate Monolith)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetic/telemetry-hud": "*",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.174.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}
