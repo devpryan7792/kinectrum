@@ -4,6 +4,7 @@
 
 <br/><br/>
 
+[![Live Showcase](https://img.shields.io/badge/LIVE_SHOWCASE-devpryan7792.github.io%2Fkinectrum-7AA2F7?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=1A1B26)](https://devpryan7792.github.io/kinectrum/)
 [![Substrates](https://img.shields.io/badge/SUBSTRATES-6_DISCRETE_ENGINES-7AA2F7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
 [![WebGPU](https://img.shields.io/badge/WEBGPU_COMPUTE-WGSL_100K+_BODIES-E0AF68?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
 [![Three.js](https://img.shields.io/badge/THREE.JS_r174-PBR_OPTICAL_GLASS-BB9AF7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
@@ -63,14 +64,14 @@ npm run build
 
 ### Launch Individual Substrates
 
-| Substrate | Local Command | Live Specimen (TinyURL) | Focus |
-|---|---|---|---|
-| **01 · GSAP Horology** | <code>npm run dev:gsap</code> | [tinyurl.com/26eugkpc](https://tinyurl.com/26eugkpc) | DOM compositor choreography, FLIP zero-reflow layout |
-| **02 · Three Refraction** | <code>npm run dev:three</code> | [tinyurl.com/2da93rhc](https://tinyurl.com/2da93rhc) | Optical transmission, IOR 1.52, roughness mipmaps |
-| **03 · GLSL Singularity** | <code>npm run dev:glsl</code> | [tinyurl.com/2ydjfhz8](https://tinyurl.com/2ydjfhz8) | Pure screen-quad raymarching, polynomial smooth minimum |
-| **04 · Pixi Radar** | <code>npm run dev:pixi</code> | [tinyurl.com/2bqz24q4](https://tinyurl.com/2bqz24q4) | Single-batch 2D sprite atlas, 50,000 particle pool |
-| **05 · WebGPU Swarm** | <code>npm run dev:webgpu</code> | [tinyurl.com/266bzk8m](https://tinyurl.com/266bzk8m) | WGSL compute pipeline, 3D simplex curl noise, 0 CPU readback |
-| **06 · SOTD Hybrid** | <code>npm run dev:hybrid</code> | [tinyurl.com/24xasmk7](https://tinyurl.com/24xasmk7) | Lenis smooth scroll, GSAP ScrollTrigger, Three.js 1:1 camera |
+| Substrate | Local Command | Production Demo (GitHub Pages) | Direct Shortcut (TinyURL) | Substrate Focus |
+|---|---|---|---|---|
+| **01 · GSAP Horology** | <code>npm run dev:gsap</code> | [devpryan7792.github.io/.../01-gsap/](https://devpryan7792.github.io/kinectrum/01-gsap/) | [tinyurl.com/26eugkpc](https://tinyurl.com/26eugkpc) | DOM compositor choreography, FLIP zero-reflow |
+| **02 · Three Refraction** | <code>npm run dev:three</code> | [devpryan7792.github.io/.../02-three/](https://devpryan7792.github.io/kinectrum/02-three/) | [tinyurl.com/2da93rhc](https://tinyurl.com/2da93rhc) | Optical transmission, IOR 1.52, roughness mipmaps |
+| **03 · GLSL Singularity** | <code>npm run dev:glsl</code> | [devpryan7792.github.io/.../03-glsl/](https://devpryan7792.github.io/kinectrum/03-glsl/) | [tinyurl.com/2ydjfhz8](https://tinyurl.com/2ydjfhz8) | Pure screen-quad raymarching, polynomial smooth min |
+| **04 · Pixi Radar** | <code>npm run dev:pixi</code> | [devpryan7792.github.io/.../04-pixi/](https://devpryan7792.github.io/kinectrum/04-pixi/) | [tinyurl.com/2bqz24q4](https://tinyurl.com/2bqz24q4) | Single-batch 2D sprite atlas, 50,000 particle pool |
+| **05 · WebGPU Swarm** | <code>npm run dev:webgpu</code> | [devpryan7792.github.io/.../05-webgpu/](https://devpryan7792.github.io/kinectrum/05-webgpu/) | [tinyurl.com/266bzk8m](https://tinyurl.com/266bzk8m) | WGSL compute pipeline, 3D curl noise, 0 CPU readback |
+| **06 · SOTD Hybrid** | <code>npm run dev:hybrid</code> | [devpryan7792.github.io/.../06-hybrid/](https://devpryan7792.github.io/kinectrum/06-hybrid/) | [tinyurl.com/24xasmk7](https://tinyurl.com/24xasmk7) | Lenis smooth scroll, GSAP ScrollTrigger, 1:1 camera |
 
 ---
 
@@ -85,8 +86,8 @@ npm run build
   <b>Engine:</b> GSAP 3.12 + ScrollTrigger + Flip Plugin<br>
   <b>Telemetry:</b> 0 WebGL Draws · 0 Layout Reflows · Compositor-Only<br>
   <b>Stress Test:</b> 250 Concurrent Procedural Involute Tooth Tweens<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/26eugkpc">tinyurl.com/26eugkpc</a><br>
-  <b>Launch:</b> <code>npm run dev:gsap</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/01-gsap/">devpryan7792.github.io/kinectrum/01-gsap/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:gsap</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
   <a href="#specimen-02--threejs-optical-refraction-monolith"><img src="./assets/previews/02-three.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
@@ -95,8 +96,8 @@ npm run build
   <b>Engine:</b> Three.js r174 (MeshPhysicalMaterial + ToneMapping)<br>
   <b>Telemetry:</b> ≤ 30 Draw Calls · Real-Time Refraction IOR 1.52<br>
   <b>Stress Test:</b> 5 Overlapping Refractive Glass Bodies at 60 FPS<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/2da93rhc">tinyurl.com/2da93rhc</a><br>
-  <b>Launch:</b> <code>npm run dev:three</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/02-three/">devpryan7792.github.io/kinectrum/02-three/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:three</code>
 </td>
 </tr>
 <tr>
@@ -107,8 +108,8 @@ npm run build
   <b>Engine:</b> Raw WebGL2 Context · Single Screen-Filling Quad<br>
   <b>Telemetry:</b> Exactly 1 Draw Call · 128 Raymarch Steps / Pixel<br>
   <b>Stress Test:</b> Real-time 3D Gyroid Manifold Transformation<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/2ydjfhz8">tinyurl.com/2ydjfhz8</a><br>
-  <b>Launch:</b> <code>npm run dev:glsl</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/03-glsl/">devpryan7792.github.io/kinectrum/03-glsl/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:glsl</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
   <a href="#specimen-04--pixijs-v8-cybernetic-vector-radar"><img src="./assets/previews/04-pixi.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
@@ -117,8 +118,8 @@ npm run build
   <b>Engine:</b> Pixi.js v8 + Float32Array Memory Buffer + Web Audio<br>
   <b>Telemetry:</b> 1 GPU Batch Draw Call · 50,000 Particle Sprites<br>
   <b>Stress Test:</b> 50k Concurrent Dynamic Spring-Damper Shockwaves<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/2bqz24q4">tinyurl.com/2bqz24q4</a><br>
-  <b>Launch:</b> <code>npm run dev:pixi</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/04-pixi/">devpryan7792.github.io/kinectrum/04-pixi/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:pixi</code>
 </td>
 </tr>
 <tr>
@@ -129,8 +130,8 @@ npm run build
   <b>Engine:</b> WebGPU API + WGSL Compute Shaders (64 Threads/Group)<br>
   <b>Telemetry:</b> 0 CPU Readback · Ping-Pong GPU Storage Buffers<br>
   <b>Stress Test:</b> 100,000+ Particles through 3D Simplex Curl Fields<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/266bzk8m">tinyurl.com/266bzk8m</a><br>
-  <b>Launch:</b> <code>npm run dev:webgpu</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/05-webgpu/">devpryan7792.github.io/kinectrum/05-webgpu/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:webgpu</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
   <a href="#specimen-06--agency-sotd-hybrid-standard"><img src="./assets/previews/06-hybrid.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
@@ -139,8 +140,8 @@ npm run build
   <b>Engine:</b> Lenis v1.1 + GSAP ScrollTrigger + Three.js Sync Plane<br>
   <b>Telemetry:</b> 0px Drift · Font-Load Guard · Velocity-Wave Shader<br>
   <b>Stress Test:</b> 3,000 px/s High-Velocity Scrubbing with 0 Drift<br>
-  <b>Live Demo:</b> <a href="https://tinyurl.com/24xasmk7">tinyurl.com/24xasmk7</a><br>
-  <b>Launch:</b> <code>npm run dev:hybrid</code>
+  <b>Live Production:</b> <a href="https://devpryan7792.github.io/kinectrum/06-hybrid/">devpryan7792.github.io/kinectrum/06-hybrid/</a><br>
+  <b>Launch Local:</b> <code>npm run dev:hybrid</code>
 </td>
 </tr>
 </table>
@@ -282,6 +283,22 @@ Every line of code across all packages and sites satisfies the **Five Invariants
    DOM-synced canvases register debounced `ResizeObserver` instances and wait for `document.fonts.ready` before locking bounding rects.
 5. **Strict Compilation Invariant:**
    Every package runs under TypeScript 5.7+ in strict mode (`"strict": true`, `"noEmitOnError": true`). Zero warnings, zero `any` assertions in mathematical kernels.
+
+---
+
+## 🌐 Master Live Deployments & Mirror Index
+
+All specimens are continuously built and deployed to GitHub Pages via automated GitHub Actions CI/CD. The primary verified canonical domain is hosted directly on GitHub, with corresponding quick-access shortcuts provided below:
+
+| Target / Specimen | Primary Verified Production URL (GitHub Pages) | Direct Shortcut (TinyURL) | Telemetry SLA Status |
+|---|---|---|---|
+| **🌌 Master Showcase Portal** | [devpryan7792.github.io/kinectrum/](https://devpryan7792.github.io/kinectrum/) | [tinyurl.com/23bqsk6t](https://tinyurl.com/23bqsk6t) | **Active · 60 FPS** |
+| **01 · GSAP Haute Horology** | [devpryan7792.github.io/kinectrum/01-gsap/](https://devpryan7792.github.io/kinectrum/01-gsap/) | [tinyurl.com/26eugkpc](https://tinyurl.com/26eugkpc) | **Active · 0 Reflows** |
+| **02 · Three.js Optical Monolith** | [devpryan7792.github.io/kinectrum/02-three/](https://devpryan7792.github.io/kinectrum/02-three/) | [tinyurl.com/2da93rhc](https://tinyurl.com/2da93rhc) | **Active · ≤ 30 Draws** |
+| **03 · Raw GLSL Singularity** | [devpryan7792.github.io/kinectrum/03-glsl/](https://devpryan7792.github.io/kinectrum/03-glsl/) | [tinyurl.com/2ydjfhz8](https://tinyurl.com/2ydjfhz8) | **Active · 1 Draw Call** |
+| **04 · Pixi.js v8 Vector Radar** | [devpryan7792.github.io/kinectrum/04-pixi/](https://devpryan7792.github.io/kinectrum/04-pixi/) | [tinyurl.com/2bqz24q4](https://tinyurl.com/2bqz24q4) | **Active · 1 GPU Batch** |
+| **05 · WebGPU Million-Body Swarm** | [devpryan7792.github.io/kinectrum/05-webgpu/](https://devpryan7792.github.io/kinectrum/05-webgpu/) | [tinyurl.com/266bzk8m](https://tinyurl.com/266bzk8m) | **Active · 0 Readback** |
+| **06 · Agency SOTD Hybrid Monograph** | [devpryan7792.github.io/kinectrum/06-hybrid/](https://devpryan7792.github.io/kinectrum/06-hybrid/) | [tinyurl.com/24xasmk7](https://tinyurl.com/24xasmk7) | **Active · 0.00px Drift** |
 
 ---
 
