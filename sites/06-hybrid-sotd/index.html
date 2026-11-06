@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06 · AGENCY SOTD HYBRID // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Fixed WebGL Scene synced to DOM coordinates -->
+    <canvas id="webgl-bg"></canvas>
+
+    <!-- Semantic Accessible DOM Layer -->
+    <header class="site-header">
+      <div>
+        <div class="brand-title">THE ARCHITECTURAL MONOGRAPH // SPECIMEN 06</div>
+        <div class="brand-sub">SUBSTRATE: HYBRID LENIS + GSAP + THREE.JS DOM-SYNC CANVAS</div>
+      </div>
+      <div>
+        <span class="brand-sub">FPS: <span id="hud-fps">60</span> | DRIFT: <span id="hud-drift" style="color: #7AA2F7; font-weight: bold;">0.00px</span></span>
+      </div>
+    </header>
+
+    <main class="content-layer">
+      <!-- Section 0: Hero -->
+      <section class="hero-section">
+        <div class="eyebrow">// SOTD STANDARD · 1:1 PIXEL SPACE ALIGNMENT</div>
+        <h1 class="hero-title">KINETIC<br />FUSION</h1>
+        <p class="hero-sub">
+          The pinnacle of creative agency engineering does not bifurcate HTML and WebGL.
+          Accessible semantic typography floats above a synchronized Three.js camera calibrated so
+          1 world unit equals exactly 1 screen pixel. Fluid inertia drives GLSL vertex wave ripples in real-time.
+        </p>
+      </section>
+
+      <!-- Section 1: Fluid Inertia Dynamics -->
+      <section class="narrative-section">
+        <div class="section-fig">FIG. 01 // VIRTUAL SCROLL INERTIA</div>
+        <h2 class="section-title">Harmonic Momentum Normalization</h2>
+        <div class="cards-grid">
+          <article class="sync-card" data-webgl-sync="card-1">
+            <span class="card-num">CARD · 01</span>
+            <div class="card-body">
+              <h3>Lenis Inertia Lubricant</h3>
+              <p>
+                Trackpad ballistic acceleration, mechanical mousewheel detents, and capacitive mobile touch gestures
+                are transformed into continuous harmonic velocity. GSAP ScrollTrigger updates synchronously on every Lenis tick.
+              </p>
+            </div>
+            <div class="card-footer">VELOCITY MAPPED TO GLSL DISPLACEMENT WAVEFORM</div>
+          </article>
+
+          <article class="sync-card" data-webgl-sync="card-2">
+            <span class="card-num">CARD · 02</span>
+            <div class="card-body">
+              <h3>Orthographic Metric Match</h3>
+              <p>
+                Camera perspective FOV is dynamically calculated from viewport height and distance:
+                fov = 2 · arctan(H / 2000) · (180 / π). Zero pixel distortion across ultrawide monitors and mobile viewports.
+              </p>
+            </div>
+            <div class="card-footer">MATHEMATICAL 1 UNIT = 1 PIXEL CAM ALIGNMENT</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 2: Zero Layout Thrashing -->
+      <section class="narrative-section">
+        <div class="section-fig">FIG. 02 // ZERO LAYOUT THRASHING</div>
+        <h2 class="section-title">Compositor Coordinate Projection</h2>
+        <div class="cards-grid">
+          <article class="sync-card" data-webgl-sync="card-3">
+            <span class="card-num">CARD · 03</span>
+            <div class="card-body">
+              <h3>Batch Bounding Box Sync</h3>
+              <p>
+                Each DOM bounding client rect is polled per frame during inertia scroll and projected onto Three.js
+                plane meshes. Text remains 100% accessible, selectable, and readable by screen-readers.
+              </p>
+            </div>
+            <div class="card-footer">FULL DOM ACCESSIBILITY WITH SPATIAL WEBGL DEPTH</div>
+          </article>
+
+          <article class="sync-card" data-webgl-sync="card-4">
+            <span class="card-num">CARD · 04</span>
+            <div class="card-body">
+              <h3>Font & Resize Resilience</h3>
+              <p>
+                Guarded against font-loading shifts with document.fonts.ready and debounced ResizeObserver on document body.
+                Zero visual drift, zero canvas jitter, zero layout recalculation spikes.
+              </p>
+            </div>
+            <div class="card-footer">DEBOUNCED RESIZEOBSERVER + FONTS.READY HARDENING</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Left Velocity Telemetry -->
+    <div class="velocity-badge">
+      SCROLL VELOCITY: <b id="val-velocity">0.00 px/s</b> | DELTA Z: <b id="val-deltaz">0.00</b>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

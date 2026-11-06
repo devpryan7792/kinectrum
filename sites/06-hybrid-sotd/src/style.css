@@ -1,0 +1,208 @@
+/* The Architectural Monograph // Lenis + GSAP + Three.js Hybrid */
+
+:root {
+  --bg-obsidian: #0A0A0C;
+  --bg-card: rgba(26, 27, 38, 0.45);
+  --text-bone: #F6F3EC;
+  --text-muted: #7E8294;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --accent-blue: #7AA2F7;
+  --accent-vermilion: #FF3300;
+  --accent-gold: #E0AF68;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--bg-obsidian);
+  color: var(--text-bone);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fixed Three.js Background Canvas */
+canvas#webgl-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Master DOM Narrative Layer */
+.content-layer {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 160px;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: rgba(10, 10, 12, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--hairline);
+  z-index: 100;
+}
+
+.brand-title {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-blue);
+}
+
+.brand-sub {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.eyebrow {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Narrative Sections */
+.narrative-section {
+  margin-top: 140px;
+}
+
+.section-fig {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent-blue);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+/* Synchronized 3D Card Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.sync-card {
+  position: relative;
+  min-height: 340px;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--hairline);
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.sync-card:hover {
+  border-color: rgba(122, 162, 247, 0.4);
+}
+
+.card-num {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-blue);
+  letter-spacing: 0.1em;
+}
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-body p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.card-footer {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  color: #565F89;
+  letter-spacing: 0.08em;
+}
+
+/* Fixed Velocity Telemetry */
+.velocity-badge {
+  position: fixed;
+  bottom: 24px;
+  left: 32px;
+  background: rgba(26, 27, 38, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--hairline);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  z-index: 100;
+}
+.velocity-badge b {
+  color: var(--accent-blue);
+}
