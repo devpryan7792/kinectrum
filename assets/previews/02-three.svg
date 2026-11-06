@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="100%" stop-color="#0E1017" />
+    </linearGradient>
+    <pattern id="grid02" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.04" />
+    </pattern>
+    <linearGradient id="glassFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AA2F7" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#1A1B26" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#BB9AF7" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="titaniumGimbal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A9B1D6" />
+      <stop offset="50%" stop-color="#414868" />
+      <stop offset="100%" stop-color="#24283B" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg02)" rx="8" />
+  <rect width="600" height="340" fill="url(#grid02)" rx="8" />
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="8" />
+
+  <!-- Badge Top -->
+  <rect x="24" y="22" width="180" height="20" rx="3" fill="#1A1B26" stroke="#BB9AF7" stroke-width="0.8" stroke-opacity="0.4" />
+  <text x="32" y="36" class="mono" font-size="9" font-weight="700" fill="#BB9AF7" letter-spacing="1.5">SPECIMEN 02 · THREE.JS</text>
+  <text x="576" y="36" class="mono" font-size="9" fill="#565F89" text-anchor="end">≤ 30 DRAWS · IOR 1.52 PBR</text>
+
+  <!-- Optical Monolith & Refraction Rays -->
+  <g transform="translate(300, 170)">
+    <!-- Titanium Outer Gimbal Ring (Isometric Projection) -->
+    <ellipse cx="0" cy="0" rx="140" ry="60" fill="none" stroke="url(#titaniumGimbal)" stroke-width="3" stroke-dasharray="6,3" />
+    <ellipse cx="0" cy="0" rx="132" ry="54" fill="none" stroke="#7AA2F7" stroke-width="0.75" stroke-opacity="0.3" />
+
+    <!-- Incident Studio Light Rays (Three-Point Softbox) -->
+    <line x1="-180" y1="-90" x2="-60" y2="-20" stroke="#E0AF68" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3,3" />
+    <line x1="-180" y1="-75" x2="-55" y2="-10" stroke="#E0AF68" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3,3" />
+
+    <!-- Borosilicate Glass Monolith Isometric Cube -->
+    <!-- Back wireframe -->
+    <line x1="0" y1="20" x2="0" y2="90" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="2,2" />
+    <line x1="-65" y1="-15" x2="0" y2="20" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="2,2" />
+    <line x1="65" y1="-15" x2="0" y2="20" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="2,2" />
+
+    <!-- Internal Dispersion Caustic Rays (RGB Split inside Glass) -->
+    <line x1="-40" y1="-10" x2="20" y2="40" stroke="#FF5370" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="-40" y1="-10" x2="25" y2="44" stroke="#9ECE6A" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="-40" y1="-10" x2="30" y2="48" stroke="#7AA2F7" stroke-width="1.2" stroke-opacity="0.6" />
+
+    <!-- Front Cube Faces (Top, Left, Right) -->
+    <!-- Top Face -->
+    <polygon points="0,-80 65,-45 0,-10 -65,-45" fill="url(#glassFace)" stroke="#7AA2F7" stroke-width="1.5" />
+    <!-- Left Face -->
+    <polygon points="-65,-45 0,-10 0,60 -65,25" fill="#13151F" fill-opacity="0.7" stroke="#7AA2F7" stroke-width="1.5" />
+    <!-- Right Face -->
+    <polygon points="0,-10 65,-45 65,25 0,60" fill="#1C1E2D" fill-opacity="0.6" stroke="#BB9AF7" stroke-width="1.5" />
+
+    <!-- Beveled Chamfer Edge Highlights -->
+    <line x1="0" y1="-80" x2="0" y2="-10" stroke="#F6F3EC" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="0" y1="-10" x2="0" y2="60" stroke="#7AA2F7" stroke-width="2" stroke-opacity="0.9" />
+
+    <!-- Outer Gimbal Pivots -->
+    <circle cx="-140" cy="0" r="4.5" fill="#A9B1D6" stroke="#1A1B26" stroke-width="1" />
+    <circle cx="140" cy="0" r="4.5" fill="#A9B1D6" stroke="#1A1B26" stroke-width="1" />
+  </g>
+
+  <!-- Bottom Legend -->
+  <text x="24" y="316" class="sans" font-size="13" font-weight="700" fill="#F6F3EC">OPTICAL REFRACTION MONOLITH</text>
+  <text x="576" y="316" class="mono" font-size="9.5" fill="#BB9AF7" text-anchor="end">TRANSMISSION OVERDRAW AUDIT</text>
+</svg>

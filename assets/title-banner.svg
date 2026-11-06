@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="50%" stop-color="#0A0A0E" />
+      <stop offset="100%" stop-color="#101218" />
+    </linearGradient>
+
+    <!-- Linear Accent Gradients -->
+    <linearGradient id="accent-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7AA2F7" />
+      <stop offset="100%" stop-color="#BB9AF7" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7DCFFF" />
+      <stop offset="100%" stop-color="#7AA2F7" />
+    </linearGradient>
+
+    <!-- Subtle Hairline Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.035" />
+      <circle cx="40" cy="40" r="0.75" fill="#7AA2F7" fill-opacity="0.25" />
+    </pattern>
+
+    <pattern id="dots" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="80" cy="80" r="1.5" fill="#BB9AF7" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)" />
+
+  <!-- Grid Overlays -->
+  <rect width="1200" height="400" fill="url(#grid)" />
+  <rect width="1200" height="400" fill="url(#dots)" />
+
+  <!-- Decorative Border Frame & Reticles -->
+  <rect x="20" y="20" width="1160" height="360" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="6" />
+
+  <!-- Corner Precision Reticles -->
+  <path d="M 15 35 L 35 35 L 35 15" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.7" />
+  <path d="M 1185 35 L 1165 35 L 1165 15" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.7" />
+  <path d="M 15 365 L 35 365 L 35 385" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.7" />
+  <path d="M 1185 365 L 1165 365 L 1165 385" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.7" />
+
+  <!-- Top Technical Header Strip -->
+  <text x="50" y="55" class="mono" font-size="10" font-weight="700" fill="#7AA2F7" letter-spacing="3">// VOL. 01 — ARCHITECTURAL RESEARCH MONOGRAPH</text>
+  <text x="1150" y="55" class="mono" font-size="10" font-weight="500" fill="#565F89" text-anchor="end" letter-spacing="2">6 SUBSTRATES · ZERO THEATER</text>
+
+  <!-- Central Title Monolith -->
+  <g transform="translate(50, 110)">
+    <!-- Subtitle Category Tag -->
+    <rect x="0" y="0" width="220" height="22" rx="3" fill="#1A1B26" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.3" />
+    <text x="12" y="15" class="mono" font-size="9.5" font-weight="700" fill="#7DCFFF" letter-spacing="2">THE KINETIC SPECTRUM</text>
+
+    <!-- Main Display Typography -->
+    <text x="0" y="80" class="sans" font-size="62" font-weight="900" fill="#F6F3EC" letter-spacing="-2">EXTREME GRAPHICS</text>
+    <text x="0" y="145" class="sans" font-size="62" font-weight="900" fill="url(#accent-blue)" letter-spacing="-2">COMPENDIUM</text>
+
+    <!-- Monograph Narrative Description -->
+    <text x="0" y="185" class="sans" font-size="14.5" font-weight="400" fill="#9AA5CE" letter-spacing="0.2">
+      An unapologetic technical benchmark exploring the absolute limits of modern Web rendering.
+    </text>
+    <text x="0" y="208" class="mono" font-size="11" font-weight="400" fill="#565F89" letter-spacing="0.5">
+      DOM Compositor · Three.js PBR · Raw WebGL2 GLSL · Pixi.js v8 · WebGPU Compute · SOTD Hybrid
+    </text>
+  </g>
+
+  <!-- Right Geometric Radar & Geometry Hologram -->
+  <g transform="translate(980, 200)">
+    <!-- Concentric Blueprint Rings -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#1A1B26" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#BB9AF7" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#7DCFFF" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="2,3" />
+    <circle cx="0" cy="0" r="4" fill="#7AA2F7" />
+
+    <!-- Crosshair Lines -->
+    <line x1="-125" y1="0" x2="125" y2="0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" />
+    <line x1="0" y1="-125" x2="0" y2="125" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" />
+
+    <!-- Isometric Rotating Polyhedron Wireframe -->
+    <polygon points="0,-75 65,-37 65,37 0,75 -65,37 -65,-37" fill="none" stroke="#7AA2F7" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="-75" x2="0" y2="75" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.25" />
+    <line x1="-65" y1="-37" x2="65" y2="37" stroke="#BB9AF7" stroke-width="1" stroke-opacity="0.25" />
+    <line x1="65" y1="-37" x2="-65" y2="37" stroke="#7DCFFF" stroke-width="1" stroke-opacity="0.25" />
+
+    <!-- Small Precision Orbit Ticks -->
+    <circle cx="65" cy="-37" r="2.5" fill="#E0AF68" />
+    <circle cx="-65" cy="37" r="2.5" fill="#9ECE6A" />
+    <circle cx="0" cy="75" r="2.5" fill="#FF7A93" />
+  </g>
+
+  <!-- Bottom Technical Metrics Ledger -->
+  <g transform="translate(50, 360)">
+    <line x1="0" y1="-15" x2="1100" y2="-15" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" />
+    <text x="0" y="0" class="mono" font-size="9.5" fill="#565F89">STRESS SLA: <tspan fill="#7AA2F7">≥ 55 FPS @ 4K</tspan></text>
+    <text x="210" y="0" class="mono" font-size="9.5" fill="#565F89">LEAK TEST: <tspan fill="#9ECE6A">0 BYTES ACCUMULATED</tspan></text>
+    <text x="460" y="0" class="mono" font-size="9.5" fill="#565F89">LEGAL STATUS: <tspan fill="#E0AF68">100% CLEAN / OFFICIAL SPECS</tspan></text>
+    <text x="760" y="0" class="mono" font-size="9.5" fill="#565F89">AUTHORS: <tspan fill="#BB9AF7">DEFERRED ARCHITECT &amp; @devpryan7792</tspan></text>
+  </g>
+</svg>

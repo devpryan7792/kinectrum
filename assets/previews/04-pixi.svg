@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg04" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="100%" stop-color="#0E1017" />
+    </linearGradient>
+    <pattern id="grid04" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.04" />
+    </pattern>
+    <linearGradient id="sweepBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9ECE6A" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#9ECE6A" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg04)" rx="8" />
+  <rect width="600" height="340" fill="url(#grid04)" rx="8" />
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="8" />
+
+  <!-- Badge Top -->
+  <rect x="24" y="22" width="180" height="20" rx="3" fill="#1A1B26" stroke="#9ECE6A" stroke-width="0.8" stroke-opacity="0.4" />
+  <text x="32" y="36" class="mono" font-size="9" font-weight="700" fill="#9ECE6A" letter-spacing="1.5">SPECIMEN 04 · PIXI.JS V8</text>
+  <text x="576" y="36" class="mono" font-size="9" fill="#565F89" text-anchor="end">1 GPU BATCH · 50,000 SPRITES</text>
+
+  <!-- Cybernetic Vector Radar Assembly -->
+  <g transform="translate(300, 170)">
+    <!-- Concentric Range Rings -->
+    <circle cx="0" cy="0" r="115" fill="none" stroke="#1A261E" stroke-width="2" />
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#9ECE6A" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="3,4" />
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#9ECE6A" stroke-width="1" stroke-opacity="0.35" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#9ECE6A" stroke-width="0.75" stroke-opacity="0.5" stroke-dasharray="2,3" />
+
+    <!-- Crosshair Azimuth Axes -->
+    <line x1="-125" y1="0" x2="125" y2="0" stroke="#9ECE6A" stroke-width="1" stroke-opacity="0.25" />
+    <line x1="0" y1="-125" x2="0" y2="125" stroke="#9ECE6A" stroke-width="1" stroke-opacity="0.25" />
+
+    <!-- Degree Markings -->
+    <text x="0" y="-120" class="mono" font-size="7" fill="#9ECE6A" text-anchor="middle">000°</text>
+    <text x="125" y="3" class="mono" font-size="7" fill="#9ECE6A">090°</text>
+    <text x="0" y="125" class="mono" font-size="7" fill="#9ECE6A" text-anchor="middle">180°</text>
+    <text x="-125" y="3" class="mono" font-size="7" fill="#9ECE6A" text-anchor="end">270°</text>
+
+    <!-- Radar Sweep Beam Sector (45° Wedge) -->
+    <path d="M 0 0 L 80 -80 A 115 115 0 0 1 112 -28 Z" fill="url(#sweepBeam)" />
+    <line x1="0" y1="0" x2="80" y2="-80" stroke="#73DACA" stroke-width="2" />
+
+    <!-- Shockwave Expanding Ripple -->
+    <circle cx="20" cy="-30" r="42" fill="none" stroke="#7DCFFF" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle cx="20" cy="-30" r="55" fill="none" stroke="#7DCFFF" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="4,2" />
+
+    <!-- Clustered Target Blips & Particles (Batched Atlas Sprites) -->
+    <!-- Blip 1 -->
+    <circle cx="65" cy="-55" r="3" fill="#FFFFFF" />
+    <circle cx="65" cy="-55" r="7" fill="none" stroke="#9ECE6A" stroke-width="1" />
+    <line x1="72" y1="-55" x2="88" y2="-65" stroke="#9ECE6A" stroke-width="0.8" />
+    <text x="92" y="-63" class="mono" font-size="7" fill="#9ECE6A">TGT-814</text>
+
+    <!-- Blip 2 -->
+    <circle cx="-45" cy="40" r="2.5" fill="#E0AF68" />
+    <circle cx="-45" cy="40" r="5" fill="none" stroke="#E0AF68" stroke-width="0.75" />
+
+    <!-- Blip 3 -->
+    <circle cx="-70" cy="-35" r="2.5" fill="#7AA2F7" />
+
+    <!-- Particle Swarm Scatter Points (Simulating 50k Pool) -->
+    <circle cx="15" cy="20" r="1" fill="#73DACA" />
+    <circle cx="28" cy="45" r="1.2" fill="#73DACA" opacity="0.7" />
+    <circle cx="45" cy="15" r="1.5" fill="#73DACA" opacity="0.8" />
+    <circle cx="-25" cy="-60" r="1" fill="#73DACA" opacity="0.6" />
+    <circle cx="-50" cy="10" r="1.2" fill="#73DACA" opacity="0.7" />
+    <circle cx="35" cy="-15" r="1.5" fill="#73DACA" opacity="0.9" />
+    <circle cx="80" cy="25" r="1" fill="#73DACA" opacity="0.5" />
+    <circle cx="-15" cy="70" r="1.2" fill="#73DACA" opacity="0.6" />
+  </g>
+
+  <!-- Bottom Legend -->
+  <text x="24" y="316" class="sans" font-size="13" font-weight="700" fill="#F6F3EC">CYBERNETIC VECTOR RADAR</text>
+  <text x="576" y="316" class="mono" font-size="9.5" fill="#9ECE6A" text-anchor="end">FLOAT32ARRAY PARTICLE POOL</text>
+</svg>

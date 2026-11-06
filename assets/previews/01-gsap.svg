@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="100%" stop-color="#0E1017" />
+    </linearGradient>
+    <pattern id="grid01" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.04" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg01)" rx="8" />
+  <rect width="600" height="340" fill="url(#grid01)" rx="8" />
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="8" />
+
+  <!-- Badge Top -->
+  <rect x="24" y="22" width="180" height="20" rx="3" fill="#1A1B26" stroke="#7AA2F7" stroke-width="0.8" stroke-opacity="0.4" />
+  <text x="32" y="36" class="mono" font-size="9" font-weight="700" fill="#7AA2F7" letter-spacing="1.5">SPECIMEN 01 · GSAP 3</text>
+  <text x="576" y="36" class="mono" font-size="9" fill="#565F89" text-anchor="end">0 WEBGL DRAWS · 0 REFLOWS</text>
+
+  <!-- Center Chronometer & Gear Train Assembly -->
+  <g transform="translate(300, 170)">
+    <!-- Outer Bezel -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#1F2335" stroke-width="4" />
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#7AA2F7" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="2,4" />
+
+    <!-- Involute Sun Gear (Center) -->
+    <circle cx="0" cy="0" r="38" fill="#10121A" stroke="#E0AF68" stroke-width="1.5" />
+    <!-- Gear Spokes -->
+    <line x1="-38" y1="0" x2="38" y2="0" stroke="#E0AF68" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="0" y1="-38" x2="0" y2="38" stroke="#E0AF68" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="-27" y1="-27" x2="27" y2="27" stroke="#E0AF68" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="-27" y1="27" x2="27" y2="-27" stroke="#E0AF68" stroke-width="1" stroke-opacity="0.5" />
+    <circle cx="0" cy="0" r="14" fill="#1A1B26" stroke="#E0AF68" stroke-width="1" />
+    <circle cx="0" cy="0" r="4" fill="#FF9E3B" />
+
+    <!-- Planet Gears (Epicyclic Train) -->
+    <!-- Planet 1 -->
+    <g transform="translate(62, -25)">
+      <circle cx="0" cy="0" r="24" fill="#0E1017" stroke="#7AA2F7" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="8" fill="#1A1B26" stroke="#7AA2F7" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#7AA2F7" />
+    </g>
+    <!-- Planet 2 -->
+    <g transform="translate(-55, -45)">
+      <circle cx="0" cy="0" r="30" fill="#0E1017" stroke="#BB9AF7" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="10" fill="#1A1B26" stroke="#BB9AF7" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#BB9AF7" />
+    </g>
+    <!-- Planet 3 -->
+    <g transform="translate(-25, 65)">
+      <circle cx="0" cy="0" r="22" fill="#0E1017" stroke="#9ECE6A" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="7" fill="#1A1B26" stroke="#9ECE6A" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#9ECE6A" />
+    </g>
+
+    <!-- Escapement Fork & Balance Wheel Arc -->
+    <path d="M 60 70 Q 75 90 95 85" fill="none" stroke="#FF5370" stroke-width="2" stroke-linecap="round" />
+    <circle cx="95" cy="85" r="3" fill="#FF5370" />
+
+    <!-- Chronometer Hands -->
+    <!-- Hour Hand -->
+    <line x1="0" y1="0" x2="-45" y2="-30" stroke="#F6F3EC" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Minute Hand -->
+    <line x1="0" y1="0" x2="30" y2="-65" stroke="#7AA2F7" stroke-width="1.8" stroke-linecap="round" />
+    <!-- Seconds Needle -->
+    <line x1="-12" y1="20" x2="55" y2="-75" stroke="#FF3300" stroke-width="1" />
+    <circle cx="0" cy="0" r="3.5" fill="#FF3300" />
+  </g>
+
+  <!-- Bottom Legend -->
+  <text x="24" y="316" class="sans" font-size="13" font-weight="700" fill="#F6F3EC">HAUTE HOROLOGIE CHRONOMETER</text>
+  <text x="576" y="316" class="mono" font-size="9.5" fill="#7AA2F7" text-anchor="end">FLIP ZERO-REFLOW ORCHESTRATION</text>
+</svg>

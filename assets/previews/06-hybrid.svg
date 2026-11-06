@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg06" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="100%" stop-color="#0E1017" />
+    </linearGradient>
+    <pattern id="grid06" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.04" />
+    </pattern>
+    <linearGradient id="waveMesh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7AA2F7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#BB9AF7" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg06)" rx="8" />
+  <rect width="600" height="340" fill="url(#grid06)" rx="8" />
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="8" />
+
+  <!-- Badge Top -->
+  <rect x="24" y="22" width="180" height="20" rx="3" fill="#1A1B26" stroke="#FF3300" stroke-width="0.8" stroke-opacity="0.4" />
+  <text x="32" y="36" class="mono" font-size="9" font-weight="700" fill="#FF7A93" letter-spacing="1.5">SPECIMEN 06 · SOTD HYBRID</text>
+  <text x="576" y="36" class="mono" font-size="9" fill="#565F89" text-anchor="end">LENIS + GSAP + THREE.JS DOM-SYNC</text>
+
+  <!-- Dual Layer Architecture: Back WebGL Waveform & Front DOM Card Stack -->
+  <g transform="translate(300, 170)">
+    <!-- Layer 1: Background WebGL Sinusoidal Wave Mesh (Deformed Plane) -->
+    <g opacity="0.8">
+      <!-- Wave grid lines -->
+      <path d="M -160 -40 C -100 -80, -20 0, 40 -60 C 100 -120, 140 -20, 180 -50" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M -160 0 C -100 -40, -20 40, 40 -20 C 100 -80, 140 20, 180 -10" fill="none" stroke="#7AA2F7" stroke-width="1.5" stroke-opacity="0.6" />
+      <path d="M -160 40 C -100 0, -20 80, 40 20 C 100 -40, 140 60, 180 30" fill="none" stroke="#BB9AF7" stroke-width="1.5" stroke-opacity="0.4" />
+      <path d="M -160 80 C -100 40, -20 120, 40 60 C 100 0, 140 100, 180 70" fill="none" stroke="#BB9AF7" stroke-width="1.2" stroke-opacity="0.2" />
+
+      <!-- Vertical transverse mesh ribs -->
+      <line x1="-120" y1="-60" x2="-120" y2="60" stroke="#7AA2F7" stroke-width="0.8" stroke-opacity="0.25" stroke-dasharray="2,2" />
+      <line x1="-60" y1="-40" x2="-60" y2="80" stroke="#7AA2F7" stroke-width="0.8" stroke-opacity="0.25" stroke-dasharray="2,2" />
+      <line x1="0" y1="-20" x2="0" y2="100" stroke="#7AA2F7" stroke-width="0.8" stroke-opacity="0.25" stroke-dasharray="2,2" />
+      <line x1="60" y1="-50" x2="60" y2="70" stroke="#BB9AF7" stroke-width="0.8" stroke-opacity="0.25" stroke-dasharray="2,2" />
+      <line x1="120" y1="-30" x2="120" y2="90" stroke="#BB9AF7" stroke-width="0.8" stroke-opacity="0.25" stroke-dasharray="2,2" />
+    </g>
+
+    <!-- Synced WebGL Plane Projection Box (Behind Card) -->
+    <rect x="-105" y="-65" width="210" height="130" fill="url(#waveMesh)" stroke="#7AA2F7" stroke-width="1" stroke-dasharray="4,3" rx="6" />
+
+    <!-- Layer 2: Foreground High-Contrast DOM Card (Floating exactly 1:1 on top) -->
+    <rect x="-100" y="-60" width="200" height="120" fill="#13151F" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.15" rx="6" />
+
+    <!-- Card Interior Typography & Layout -->
+    <text x="-84" y="-38" class="mono" font-size="7" fill="#7AA2F7">DOM ELEMENT: [data-webgl-sync]</text>
+    <text x="-84" y="-18" class="sans" font-size="11" font-weight="700" fill="#F6F3EC">ACCESSIBLE HERO TEXT</text>
+    <text x="-84" y="-4" class="sans" font-size="8" fill="#7E8294">Bounding rects mapped 1:1 to</text>
+    <text x="-84" y="8" class="sans" font-size="8" fill="#7E8294">Three.js camera coordinates.</text>
+
+    <!-- Live Inertia Velocity Meter inside card -->
+    <rect x="-84" y="24" width="168" height="14" rx="2" fill="#0A0A0C" />
+    <rect x="-84" y="24" width="95" height="14" rx="2" fill="#7AA2F7" fill-opacity="0.4" />
+    <text x="-80" y="34" class="mono" font-size="6.5" fill="#F6F3EC">VELOCITY: 1,840 px/s (DRIFT: 0.00px)</text>
+
+    <!-- Ray Projection Lines from WebGL to DOM -->
+    <line x1="-100" y1="-60" x2="-105" y2="-65" stroke="#FF5370" stroke-width="1" />
+    <line x1="100" y1="-60" x2="105" y2="-65" stroke="#FF5370" stroke-width="1" />
+    <line x1="100" y1="60" x2="105" y2="65" stroke="#FF5370" stroke-width="1" />
+    <line x1="-100" y1="60" x2="-105" y2="65" stroke="#FF5370" stroke-width="1" />
+  </g>
+
+  <!-- Bottom Legend -->
+  <text x="24" y="316" class="sans" font-size="13" font-weight="700" fill="#F6F3EC">AGENCY SOTD HYBRID MONOGRAPH</text>
+  <text x="576" y="316" class="mono" font-size="9.5" fill="#FF7A93" text-anchor="end">1:1 PIXEL SPACE SYNC</text>
+</svg>

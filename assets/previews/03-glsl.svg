@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg03" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080B" />
+      <stop offset="100%" stop-color="#0E1017" />
+    </linearGradient>
+    <pattern id="grid03" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.04" />
+    </pattern>
+    <radialGradient id="chromeMetaball" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#7DCFFF" />
+      <stop offset="60%" stop-color="#1A1B26" />
+      <stop offset="100%" stop-color="#0A0A0C" />
+    </radialGradient>
+    <radialGradient id="satelliteBall" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF9E3B" />
+      <stop offset="40%" stop-color="#E0AF68" />
+      <stop offset="85%" stop-color="#1A1B26" />
+      <stop offset="100%" stop-color="#0A0A0C" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="url(#bg03)" rx="8" />
+  <rect width="600" height="340" fill="url(#grid03)" rx="8" />
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.08" rx="8" />
+
+  <!-- Badge Top -->
+  <rect x="24" y="22" width="190" height="20" rx="3" fill="#1A1B26" stroke="#7DCFFF" stroke-width="0.8" stroke-opacity="0.4" />
+  <text x="32" y="36" class="mono" font-size="9" font-weight="700" fill="#7DCFFF" letter-spacing="1.5">SPECIMEN 03 · RAW GLSL</text>
+  <text x="576" y="36" class="mono" font-size="9" fill="#565F89" text-anchor="end">EXACTLY 1 DRAW CALL · 128 MARCH STEPS</text>
+
+  <!-- Center Raymarched Singularity (SDF Metaballs + Geodesic Contour) -->
+  <g transform="translate(300, 170)">
+    <!-- Signed Distance Field Iso-surface Contour Rings -->
+    <ellipse cx="0" cy="0" rx="130" ry="85" fill="none" stroke="#7DCFFF" stroke-width="0.75" stroke-opacity="0.15" stroke-dasharray="3,4" />
+    <ellipse cx="0" cy="0" rx="110" ry="70" fill="none" stroke="#7AA2F7" stroke-width="0.75" stroke-opacity="0.25" stroke-dasharray="2,3" />
+    <ellipse cx="0" cy="0" rx="90" ry="58" fill="none" stroke="#BB9AF7" stroke-width="1" stroke-opacity="0.35" />
+
+    <!-- Raymarching Cone Ray Lines -->
+    <line x1="-200" y1="-80" x2="-45" y2="-15" stroke="#7DCFFF" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,4" />
+    <line x1="-200" y1="80" x2="-50" y2="20" stroke="#7DCFFF" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,4" />
+
+    <!-- Inigo Quilez Smooth Minimum Fusion Bridge (Path) -->
+    <path d="M -50 -10 C -20 -40, 30 -50, 60 -30 C 90 -10, 80 40, 50 50 C 20 60, -30 40, -50 20 Z" fill="#1A1B26" stroke="#7DCFFF" stroke-width="1.5" stroke-opacity="0.5" />
+
+    <!-- Liquid Chrome Central Metaball -->
+    <circle cx="-25" cy="5" r="54" fill="url(#chromeMetaball)" stroke="#7DCFFF" stroke-width="1.5" />
+    <!-- Specular Highlight Curve -->
+    <path d="M -45 -15 A 25 25 0 0 1 -15 -35" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Orbiting Satellite Metaball (smin blend) -->
+    <circle cx="55" cy="-20" r="32" fill="url(#satelliteBall)" stroke="#E0AF68" stroke-width="1.2" />
+    <path d="M 45 -32 A 15 15 0 0 1 62 -42" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Small Secondary Drop -->
+    <circle cx="35" cy="45" r="16" fill="url(#chromeMetaball)" stroke="#BB9AF7" stroke-width="1" />
+
+    <!-- Analytic Normal Vector Arrows at Surface Points -->
+    <line x1="-70" y1="20" x2="-95" y2="30" stroke="#FF5370" stroke-width="1.2" />
+    <circle cx="-95" cy="30" r="2" fill="#FF5370" />
+
+    <line x1="80" y1="-35" x2="105" y2="-45" stroke="#9ECE6A" stroke-width="1.2" />
+    <circle cx="105" cy="-45" r="2" fill="#9ECE6A" />
+  </g>
+
+  <!-- Bottom Legend -->
+  <text x="24" y="316" class="sans" font-size="13" font-weight="700" fill="#F6F3EC">RAYMARCHED SDF SINGULARITY</text>
+  <text x="576" y="316" class="mono" font-size="9.5" fill="#7DCFFF" text-anchor="end">POLYNOMIAL SMIN METABALLS</text>
+</svg>
