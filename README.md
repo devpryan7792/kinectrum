@@ -79,7 +79,7 @@ npm run build
 <table style="border-collapse: collapse; border: none; width: 100%;">
 <tr>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-01--gsap-haute-horology"><img src="./assets/previews/01-gsap.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-01--gsap-haute-horology"><img src="./assets/previews/01-gsap.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>01 · GSAP HAUTE HOROLOGY</b><br>
   <span style="color: #7E8294; font-size: 12px;">DOM & SVG Compositor Choreography</span><br><br>
   <b>Engine:</b> GSAP 3.12 + ScrollTrigger + Flip Plugin<br>
@@ -88,7 +88,7 @@ npm run build
   <b>Launch:</b> <code>npm run dev:gsap</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-02--threejs-optical-refraction-monolith"><img src="./assets/previews/02-three.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-02--threejs-optical-refraction-monolith"><img src="./assets/previews/02-three.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>02 · THREE.JS OPTICAL MONOLITH</b><br>
   <span style="color: #7E8294; font-size: 12px;">WebGL 2.0 PBR Physical Glass Rasterizer</span><br><br>
   <b>Engine:</b> Three.js r174 (MeshPhysicalMaterial + ToneMapping)<br>
@@ -99,7 +99,7 @@ npm run build
 </tr>
 <tr>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-03--pure-glsl-raymarched-singularity"><img src="./assets/previews/03-glsl.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-03--pure-glsl-raymarched-singularity"><img src="./assets/previews/03-glsl.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>03 · RAW GLSL RAYMARCHED SINGULARITY</b><br>
   <span style="color: #7E8294; font-size: 12px;">Pure WebGL 2.0 Signed Distance Field Engine</span><br><br>
   <b>Engine:</b> Raw WebGL2 Context · Single Screen-Filling Quad<br>
@@ -108,7 +108,7 @@ npm run build
   <b>Launch:</b> <code>npm run dev:glsl</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-04--pixijs-v8-cybernetic-vector-radar"><img src="./assets/previews/04-pixi.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-04--pixijs-v8-cybernetic-vector-radar"><img src="./assets/previews/04-pixi.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>04 · PIXI.JS V8 VECTOR RADAR</b><br>
   <span style="color: #7E8294; font-size: 12px;">High-Throughput 2D WebGL/WebGPU Batching</span><br><br>
   <b>Engine:</b> Pixi.js v8 + Float32Array Memory Buffer + Web Audio<br>
@@ -119,7 +119,7 @@ npm run build
 </tr>
 <tr>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-05--webgpu-wgsl-million-body-swarm"><img src="./assets/previews/05-webgpu.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-05--webgpu-wgsl-million-body-swarm"><img src="./assets/previews/05-webgpu.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>05 · WEBGPU WGSL MILLION-BODY SWARM</b><br>
   <span style="color: #7E8294; font-size: 12px;">Next-Gen GPU Compute & Storage Buffer Physics</span><br><br>
   <b>Engine:</b> WebGPU API + WGSL Compute Shaders (64 Threads/Group)<br>
@@ -128,7 +128,7 @@ npm run build
   <b>Launch:</b> <code>npm run dev:webgpu</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
-  <a href="#specimen-06--agency-sotd-hybrid-standard"><img src="./assets/previews/06-hybrid.svg" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
+  <a href="#specimen-06--agency-sotd-hybrid-standard"><img src="./assets/previews/06-hybrid.gif" width="100%" style="border-radius: 6px; border: 1px solid rgba(255,255,255,0.06);"/></a><br><br>
   <b>06 · AGENCY SOTD HYBRID MONOGRAPH</b><br>
   <span style="color: #7E8294; font-size: 12px;">Semantic HTML + Lenis + Three.js 1:1 Pixel Space</span><br><br>
   <b>Engine:</b> Lenis v1.1 + GSAP ScrollTrigger + Three.js Sync Plane<br>
