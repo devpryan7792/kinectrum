@@ -27,6 +27,18 @@ export class BackgroundScene {
     });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2.0));
     this.renderer.setSize(width, height, false);
+
+    // Studio Illumination for 3D Meshes & Sculpture
+    const ambient = new THREE.AmbientLight(0xffffff, 1.2);
+    this.scene.add(ambient);
+
+    const lightCyan = new THREE.PointLight(0x7AA2F7, 3.5, 2000);
+    lightCyan.position.set(250, 250, 400);
+    this.scene.add(lightCyan);
+
+    const lightPurple = new THREE.PointLight(0xBB9AF7, 2.8, 2000);
+    lightPurple.position.set(-250, -200, 350);
+    this.scene.add(lightPurple);
   }
 
   public resize(width: number, height: number): void {

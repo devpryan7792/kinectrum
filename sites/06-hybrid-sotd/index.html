@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <!-- Fixed WebGL Scene synced to DOM coordinates -->
+    <!-- Fixed Three.js WebGL Scene (Contains 3D Hero Gyroscope & Synced Wave Meshes) -->
     <canvas id="webgl-bg"></canvas>
 
     <!-- Semantic Accessible DOM Layer -->
@@ -16,21 +16,28 @@
         <div class="brand-title">THE ARCHITECTURAL MONOGRAPH // SPECIMEN 06</div>
         <div class="brand-sub">SUBSTRATE: HYBRID LENIS + GSAP + THREE.JS DOM-SYNC CANVAS</div>
       </div>
-      <div>
+      <div class="header-controls">
+        <button id="btn-toggle-wireframe" class="btn-ctrl">WIREFRAME</button>
+        <button id="btn-boost-scrub" class="btn-ctrl">⚡ 3,000PX/S SCRUB</button>
         <span class="brand-sub">FPS: <span id="hud-fps">60</span> | DRIFT: <span id="hud-drift" style="color: #7AA2F7; font-weight: bold;">0.00px</span></span>
       </div>
     </header>
 
     <main class="content-layer">
-      <!-- Section 0: Hero -->
+      <!-- Section 0: Hero with 3D Gyroscopic Centerpiece -->
       <section class="hero-section">
         <div class="eyebrow">// SOTD STANDARD · 1:1 PIXEL SPACE ALIGNMENT</div>
         <h1 class="hero-title">KINETIC<br />FUSION</h1>
         <p class="hero-sub">
           The pinnacle of creative agency engineering does not bifurcate HTML and WebGL.
           Accessible semantic typography floats above a synchronized Three.js camera calibrated so
-          1 world unit equals exactly 1 screen pixel. Fluid inertia drives GLSL vertex wave ripples in real-time.
+          1 world unit equals exactly 1 screen pixel. A 3D gyroscopic sculpture tracks cursor coordinates,
+          while fluid inertia drives dynamic GLSL vertex wave ripples across the canvas.
         </p>
+        <div class="hero-interactive-badge">
+          <span class="dot"></span>
+          <span>3D PROCEDURAL GYROSCOPE ACTIVE &bull; MOVE CURSOR &amp; SCROLL</span>
+        </div>
       </section>
 
       <!-- Section 1: Fluid Inertia Dynamics -->
@@ -47,7 +54,7 @@
                 are transformed into continuous harmonic velocity. GSAP ScrollTrigger updates synchronously on every Lenis tick.
               </p>
             </div>
-            <div class="card-footer">VELOCITY MAPPED TO GLSL DISPLACEMENT WAVEFORM</div>
+            <div class="card-footer">3D TORUS KNOT // HOVER CARD TO TILT</div>
           </article>
 
           <article class="sync-card" data-webgl-sync="card-2">
@@ -59,7 +66,7 @@
                 fov = 2 · arctan(H / 2000) · (180 / π). Zero pixel distortion across ultrawide monitors and mobile viewports.
               </p>
             </div>
-            <div class="card-footer">MATHEMATICAL 1 UNIT = 1 PIXEL CAM ALIGNMENT</div>
+            <div class="card-footer">3D ICOSAHEDRON // PERSPECTIVE ROTATION</div>
           </article>
         </div>
       </section>
@@ -78,7 +85,7 @@
                 plane meshes. Text remains 100% accessible, selectable, and readable by screen-readers.
               </p>
             </div>
-            <div class="card-footer">FULL DOM ACCESSIBILITY WITH SPATIAL WEBGL DEPTH</div>
+            <div class="card-footer">3D OCTAHEDRON // REAL-TIME LIGHTING</div>
           </article>
 
           <article class="sync-card" data-webgl-sync="card-4">
@@ -90,7 +97,7 @@
                 Zero visual drift, zero canvas jitter, zero layout recalculation spikes.
               </p>
             </div>
-            <div class="card-footer">DEBOUNCED RESIZEOBSERVER + FONTS.READY HARDENING</div>
+            <div class="card-footer">3D DODECAHEDRON // HARMONIC BOB</div>
           </article>
         </div>
       </section>
@@ -98,7 +105,7 @@
 
     <!-- Bottom Left Velocity Telemetry -->
     <div class="velocity-badge">
-      SCROLL VELOCITY: <b id="val-velocity">0.00 px/s</b> | DELTA Z: <b id="val-deltaz">0.00</b>
+      SCROLL VELOCITY: <b id="val-velocity">0.00 px/s</b> | WAVE AMP: <b id="val-deltaz">25.00px</b>
     </div>
 
     <script type="module" src="./src/main.ts"></script>

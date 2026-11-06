@@ -1,14 +1,16 @@
 /* The Architectural Monograph // Lenis + GSAP + Three.js Hybrid */
 
 :root {
-  --bg-obsidian: #0A0A0C;
-  --bg-card: rgba(26, 27, 38, 0.45);
+  --bg-obsidian: #07080B;
+  --bg-card: rgba(13, 14, 20, 0.4);
   --text-bone: #F6F3EC;
   --text-muted: #7E8294;
   --hairline: rgba(255, 255, 255, 0.08);
   --accent-blue: #7AA2F7;
   --accent-vermilion: #FF3300;
   --accent-gold: #E0AF68;
+  --accent-purple: #BB9AF7;
+  --accent-cyan: #7DCFFF;
 }
 
 * {
@@ -49,7 +51,8 @@ canvas#webgl-bg {
   z-index: 10;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 32px 160px;
+  padding: 0 32px 180px;
+  pointer-events: auto;
 }
 
 /* Header */
@@ -61,8 +64,8 @@ canvas#webgl-bg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 32px;
-  background: rgba(10, 10, 12, 0.75);
+  padding: 18px 32px;
+  background: rgba(7, 8, 11, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--hairline);
   z-index: 100;
@@ -83,13 +86,46 @@ canvas#webgl-bg {
   color: var(--text-muted);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-ctrl {
+  background: #10121A;
+  border: 1px solid var(--hairline);
+  color: var(--text-bone);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.08em;
+}
+
+.btn-ctrl:hover {
+  background: #1A1B26;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-ctrl.active {
+  background: rgba(122, 162, 247, 0.2);
+  border-color: var(--accent-blue);
+  color: var(--accent-cyan);
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 120px;
+  padding-top: 100px;
+  position: relative;
 }
 
 .eyebrow {
@@ -101,19 +137,49 @@ canvas#webgl-bg {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.95;
   text-transform: uppercase;
   margin-bottom: 24px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #A9B1D6 60%, #7AA2F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 700px;
 }
 
 .hero-sub {
   font-size: 16px;
   color: var(--text-muted);
-  max-width: 600px;
+  max-width: 580px;
   line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-interactive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(122, 162, 247, 0.1);
+  border: 1px solid rgba(122, 162, 247, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  color: var(--accent-cyan);
+  width: fit-content;
+}
+.hero-interactive-badge .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  animation: pulse-dot 1.5s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 /* Narrative Sections */
@@ -150,16 +216,19 @@ canvas#webgl-bg {
   border-radius: 8px;
   border: 1px solid var(--hairline);
   background: var(--bg-card);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s, box-shadow 0.25s;
+  transform-style: preserve-3d;
 }
 
 .sync-card:hover {
-  border-color: rgba(122, 162, 247, 0.4);
+  border-color: rgba(122, 162, 247, 0.7);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 28px rgba(122, 162, 247, 0.2);
 }
 
 .card-num {
@@ -173,19 +242,22 @@ canvas#webgl-bg {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--text-bone);
 }
 
 .card-body p {
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
+  max-width: 320px;
 }
 
 .card-footer {
   font-family: ui-monospace, 'JetBrains Mono', monospace;
   font-size: 9.5px;
-  color: #565F89;
+  color: #7AA2F7;
   letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 /* Fixed Velocity Telemetry */
@@ -193,16 +265,23 @@ canvas#webgl-bg {
   position: fixed;
   bottom: 24px;
   left: 32px;
-  background: rgba(26, 27, 38, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(13, 14, 20, 0.9);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--hairline);
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-family: ui-monospace, 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--text-muted);
   z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 .velocity-badge b {
   color: var(--accent-blue);
+}
+
+@media (max-width: 800px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
