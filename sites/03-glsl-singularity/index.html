@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03 · PURE GLSL RAYMARCHED SINGULARITY // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="gl-canvas"></canvas>
+    </div>
+
+    <div class="hud-overlay">
+      <header class="hud-header">
+        <div class="hud-brand">
+          <div class="hud-brand-title">THE KINETIC SPECTRUM // SPECIMEN 03</div>
+          <div class="hud-brand-sub">SUBSTRATE: PURE GLSL ES 3.0 RAYMARCHED SINGULARITY</div>
+        </div>
+
+        <div class="hud-controls">
+          <button class="btn-ctrl" id="btn-stress-toggle" title="Stress test 128-step raymarching with Gyroid manifold">⚡ 128-STEP GYROID STRESS</button>
+          <button class="btn-ctrl" id="btn-reset-orbit">RESET ORBIT</button>
+        </div>
+      </header>
+
+      <div class="hud-reticle"></div>
+
+      <footer class="hud-footer">
+        <div class="hud-spec-block">
+          <div>PIPELINE: <b>SINGLE SCREEN QUAD (1 DRAW CALL)</b></div>
+          <div>SDF ALGEBRA: <b>POLYNOMIAL SMIN METABALLS</b></div>
+          <div>ROOT FINDING: <b>SPHERE TRACING (EPSILON 0.001)</b></div>
+        </div>
+
+        <div class="hud-sliders">
+          <div class="slider-unit">
+            <span>FUSION BLEND:</span>
+            <input type="range" id="slider-blend" min="0.1" max="2.0" step="0.05" value="1.0" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

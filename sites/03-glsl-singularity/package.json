@@ -1,0 +1,19 @@
+{
+  "name": "@kinetic/site-03-glsl",
+  "version": "1.0.0",
+  "description": "Epoch 3: Pure GLSL Raymarched Singularity (Non-Euclidean SDF Liquid Chrome)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetic/telemetry-hud": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}
