@@ -4,14 +4,14 @@
 
 <br/><br/>
 
-[![Substrates](https://img.shields.io/badge/SUBSTRATES-6_DISCRETE_ENGINES-7AA2F7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![WebGPU](https://img.shields.io/badge/WEBGPU_COMPUTE-WGSL_100K+_BODIES-E0AF68?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![Three.js](https://img.shields.io/badge/THREE.JS_r174-PBR_OPTICAL_GLASS-BB9AF7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![GLSL](https://img.shields.io/badge/RAW_GLSL-1_DRAW_CALL_SDF-7DCFFF?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![Pixi.js](https://img.shields.io/badge/PIXI.JS_v8-1_GPU_BATCH_RADAR-9ECE6A?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![GSAP](https://img.shields.io/badge/GSAP_3-0_REFLOW_CHOREOGRAPHY-FF7A93?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![SOTD Hybrid](https://img.shields.io/badge/AGENCY_SOTD-1:1_PIXEL_SPACE-7AA2F7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
-[![Zero AI Slop](https://img.shields.io/badge/ENGINEERING-ZERO_AI_SLOP-9ECE6A?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/creative)
+[![Substrates](https://img.shields.io/badge/SUBSTRATES-6_DISCRETE_ENGINES-7AA2F7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![WebGPU](https://img.shields.io/badge/WEBGPU_COMPUTE-WGSL_100K+_BODIES-E0AF68?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![Three.js](https://img.shields.io/badge/THREE.JS_r174-PBR_OPTICAL_GLASS-BB9AF7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![GLSL](https://img.shields.io/badge/RAW_GLSL-1_DRAW_CALL_SDF-7DCFFF?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![Pixi.js](https://img.shields.io/badge/PIXI.JS_v8-1_GPU_BATCH_RADAR-9ECE6A?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![GSAP](https://img.shields.io/badge/GSAP_3-0_REFLOW_CHOREOGRAPHY-FF7A93?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![SOTD Hybrid](https://img.shields.io/badge/AGENCY_SOTD-1:1_PIXEL_SPACE-7AA2F7?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
+[![Zero AI Slop](https://img.shields.io/badge/ENGINEERING-ZERO_AI_SLOP-9ECE6A?style=for-the-badge&labelColor=1A1B26)](https://github.com/devpryan7792/kinectrum)
 
 <br/>
 
@@ -50,7 +50,7 @@ creative/
 
 ```bash
 # Clone and install dependencies
-git clone https://github.com/devpryan7792/creative.git
+git clone https://github.com/devpryan7792/kinectrum.git
 cd creative
 npm install
 
