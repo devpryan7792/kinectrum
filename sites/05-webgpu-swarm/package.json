@@ -1,0 +1,20 @@
+{
+  "name": "@kinetic/site-05-webgpu",
+  "version": "1.0.0",
+  "description": "Epoch 5: WebGPU WGSL Million-Body Swarm (Compute Shaders & Storage Buffers)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetic/telemetry-hud": "*"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.54",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

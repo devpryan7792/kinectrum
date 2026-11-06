@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 · WEBGPU WGSL MILLION-BODY SWARM // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="gpu-canvas"></canvas>
+    </div>
+
+    <div class="fallback-banner" id="fallback-banner">
+      <b>[WEBGPU HARDWARE NOTICE]</b> WebGPU is not enabled or supported in your current browser session. A real-time 5,000 particle canvas fallback is active. To enable WebGPU, use a compatible browser (Chromium/Chrome 113+, Edge, Safari 18+) or enable <code>chrome://flags/#enable-unsafe-webgpu</code>.
+    </div>
+
+    <div class="hud-overlay">
+      <header class="hud-header">
+        <div class="hud-brand">
+          <div class="hud-brand-title">THE KINETIC SPECTRUM // SPECIMEN 05</div>
+          <div class="hud-brand-sub">SUBSTRATE: NEXT-GEN GPU COMPUTE SHADERS (WEBGPU WGSL)</div>
+        </div>
+
+        <div class="hud-controls">
+          <button class="btn-ctrl" id="btn-blast">TRIGGER GRAVITY SHOCKWAVE</button>
+        </div>
+      </header>
+
+      <footer class="hud-footer">
+        <div class="hud-spec-block">
+          <div>PIPELINE: <b>PING-PONG STORAGE BUFFERS (32B ALIGNMENT)</b></div>
+          <div>CPU READ-BACK: <b>0 BYTES (DIRECT VERTEX INSTANCING)</b></div>
+          <div>SIMULATION WORKGROUPS: <b id="lbl-workgroups">7,813 WORKGROUPS (64 THREADS/WG)</b></div>
+        </div>
+
+        <div class="hud-sliders">
+          <div class="slider-unit">
+            <span>PARTICLE COUNT:</span>
+            <select id="sel-particle-count">
+              <option value="100000">100,000 BODIES</option>
+              <option value="250000">250,000 BODIES</option>
+              <option value="500000" selected>500,000 BODIES (MAX)</option>
+            </select>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

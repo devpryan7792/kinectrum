@@ -1,0 +1,190 @@
+/* The Million-Body Swarm // WebGPU WGSL Compute Shaders */
+
+:root {
+  --bg-obsidian: #0A0A0C;
+  --text-bone: #F6F3EC;
+  --text-muted: #7E8294;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --accent-cyan: #7AA2F7;
+  --accent-vermilion: #FF3300;
+  --accent-gold: #E0AF68;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-obsidian);
+  color: var(--text-bone);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas#gpu-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Screen Space HUD Overlay */
+.hud-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+  z-index: 10;
+}
+
+.hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+.hud-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hud-brand-title {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-cyan);
+}
+
+.hud-brand-sub {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.hud-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-ctrl {
+  background: rgba(26, 27, 38, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--hairline);
+  color: var(--text-muted);
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: all 0.15s ease;
+}
+
+.btn-ctrl:hover {
+  color: var(--text-bone);
+  border-color: var(--accent-cyan);
+}
+
+.btn-ctrl.stress-active {
+  background: var(--accent-vermilion);
+  color: #FFFFFF;
+  border-color: var(--accent-vermilion);
+  font-weight: 700;
+  animation: pulse-stress 1.5s infinite;
+}
+
+@keyframes pulse-stress {
+  0%, 100% { box-shadow: 0 0 12px rgba(255, 51, 0, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(255, 51, 0, 0.8); }
+}
+
+/* Footer Telemetry & Count Selector */
+.hud-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: auto;
+}
+
+.hud-spec-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.hud-spec-block b {
+  color: var(--accent-cyan);
+}
+
+.hud-sliders {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: rgba(26, 27, 38, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.slider-unit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.slider-unit select {
+  background: #14151B;
+  color: var(--accent-cyan);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Fallback Warning Banner */
+.fallback-banner {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(224, 175, 104, 0.15);
+  border: 1px solid var(--accent-gold);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-gold);
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+  z-index: 20;
+}
