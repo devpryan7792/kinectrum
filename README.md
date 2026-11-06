@@ -63,14 +63,14 @@ npm run build
 
 ### Launch Individual Substrates
 
-| Substrate | Command | Port | Focus |
+| Substrate | Local Command | Live Specimen (TinyURL) | Focus |
 |---|---|---|---|
-| **01 · GSAP Horology** | `npm run dev:gsap` | `http://localhost:5173` | DOM compositor choreography, FLIP zero-reflow layout |
-| **02 · Three Refraction** | `npm run dev:three` | `http://localhost:5173` | Optical transmission, IOR 1.52, roughness mipmaps |
-| **03 · GLSL Singularity** | `npm run dev:glsl` | `http://localhost:5173` | Pure screen-quad raymarching, polynomial smooth minimum |
-| **04 · Pixi Radar** | `npm run dev:pixi` | `http://localhost:5173` | Single-batch 2D sprite atlas, 50,000 particle pool |
-| **05 · WebGPU Swarm** | `npm run dev:webgpu` | `http://localhost:5173` | WGSL compute pipeline, 3D simplex curl noise, 0 CPU readback |
-| **06 · SOTD Hybrid** | `npm run dev:hybrid` | `http://localhost:5173` | Lenis smooth scroll, GSAP ScrollTrigger, Three.js 1:1 camera |
+| **01 · GSAP Horology** | <code>npm run dev:gsap</code> | [tinyurl.com/26eugkpc](https://tinyurl.com/26eugkpc) | DOM compositor choreography, FLIP zero-reflow layout |
+| **02 · Three Refraction** | <code>npm run dev:three</code> | [tinyurl.com/2da93rhc](https://tinyurl.com/2da93rhc) | Optical transmission, IOR 1.52, roughness mipmaps |
+| **03 · GLSL Singularity** | <code>npm run dev:glsl</code> | [tinyurl.com/2ydjfhz8](https://tinyurl.com/2ydjfhz8) | Pure screen-quad raymarching, polynomial smooth minimum |
+| **04 · Pixi Radar** | <code>npm run dev:pixi</code> | [tinyurl.com/2bqz24q4](https://tinyurl.com/2bqz24q4) | Single-batch 2D sprite atlas, 50,000 particle pool |
+| **05 · WebGPU Swarm** | <code>npm run dev:webgpu</code> | [tinyurl.com/266bzk8m](https://tinyurl.com/266bzk8m) | WGSL compute pipeline, 3D simplex curl noise, 0 CPU readback |
+| **06 · SOTD Hybrid** | <code>npm run dev:hybrid</code> | [tinyurl.com/24xasmk7](https://tinyurl.com/24xasmk7) | Lenis smooth scroll, GSAP ScrollTrigger, Three.js 1:1 camera |
 
 ---
 
@@ -85,6 +85,7 @@ npm run build
   <b>Engine:</b> GSAP 3.12 + ScrollTrigger + Flip Plugin<br>
   <b>Telemetry:</b> 0 WebGL Draws · 0 Layout Reflows · Compositor-Only<br>
   <b>Stress Test:</b> 250 Concurrent Procedural Involute Tooth Tweens<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/26eugkpc">tinyurl.com/26eugkpc</a><br>
   <b>Launch:</b> <code>npm run dev:gsap</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
@@ -94,6 +95,7 @@ npm run build
   <b>Engine:</b> Three.js r174 (MeshPhysicalMaterial + ToneMapping)<br>
   <b>Telemetry:</b> ≤ 30 Draw Calls · Real-Time Refraction IOR 1.52<br>
   <b>Stress Test:</b> 5 Overlapping Refractive Glass Bodies at 60 FPS<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/2da93rhc">tinyurl.com/2da93rhc</a><br>
   <b>Launch:</b> <code>npm run dev:three</code>
 </td>
 </tr>
@@ -105,6 +107,7 @@ npm run build
   <b>Engine:</b> Raw WebGL2 Context · Single Screen-Filling Quad<br>
   <b>Telemetry:</b> Exactly 1 Draw Call · 128 Raymarch Steps / Pixel<br>
   <b>Stress Test:</b> Real-time 3D Gyroid Manifold Transformation<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/2ydjfhz8">tinyurl.com/2ydjfhz8</a><br>
   <b>Launch:</b> <code>npm run dev:glsl</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
@@ -114,6 +117,7 @@ npm run build
   <b>Engine:</b> Pixi.js v8 + Float32Array Memory Buffer + Web Audio<br>
   <b>Telemetry:</b> 1 GPU Batch Draw Call · 50,000 Particle Sprites<br>
   <b>Stress Test:</b> 50k Concurrent Dynamic Spring-Damper Shockwaves<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/2bqz24q4">tinyurl.com/2bqz24q4</a><br>
   <b>Launch:</b> <code>npm run dev:pixi</code>
 </td>
 </tr>
@@ -125,6 +129,7 @@ npm run build
   <b>Engine:</b> WebGPU API + WGSL Compute Shaders (64 Threads/Group)<br>
   <b>Telemetry:</b> 0 CPU Readback · Ping-Pong GPU Storage Buffers<br>
   <b>Stress Test:</b> 100,000+ Particles through 3D Simplex Curl Fields<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/266bzk8m">tinyurl.com/266bzk8m</a><br>
   <b>Launch:</b> <code>npm run dev:webgpu</code>
 </td>
 <td align="left" width="50%" style="padding: 18px; vertical-align: top; border: 1px solid rgba(255,255,255,0.08); background: #0A0A0E; border-radius: 8px;">
@@ -134,6 +139,7 @@ npm run build
   <b>Engine:</b> Lenis v1.1 + GSAP ScrollTrigger + Three.js Sync Plane<br>
   <b>Telemetry:</b> 0px Drift · Font-Load Guard · Velocity-Wave Shader<br>
   <b>Stress Test:</b> 3,000 px/s High-Velocity Scrubbing with 0 Drift<br>
+  <b>Live Demo:</b> <a href="https://tinyurl.com/24xasmk7">tinyurl.com/24xasmk7</a><br>
   <b>Launch:</b> <code>npm run dev:hybrid</code>
 </td>
 </tr>
