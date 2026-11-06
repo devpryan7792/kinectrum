@@ -16,6 +16,7 @@
     "dev:webgpu": "npm run dev --workspace=@kinetic/site-05-webgpu",
     "dev:hybrid": "npm run dev --workspace=@kinetic/site-06-hybrid",
     "build": "npm run build --workspaces --if-present",
+    "build:pages": "node scripts/bundle-pages.js",
     "typecheck": "npm run typecheck --workspaces --if-present"
   },
   "devDependencies": {
