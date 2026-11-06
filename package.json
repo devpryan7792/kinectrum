@@ -1,0 +1,25 @@
+{
+  "name": "the-kinetic-spectrum",
+  "version": "1.0.0",
+  "description": "The Kinetic Spectrum: Masterclass creative animation and rendering compendium",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "sites/*"
+  ],
+  "scripts": {
+    "dev:telemetry": "npm run dev --workspace=@kinetic/telemetry-hud",
+    "dev:gsap": "npm run dev --workspace=@kinetic/site-01-gsap",
+    "dev:three": "npm run dev --workspace=@kinetic/site-02-three",
+    "dev:glsl": "npm run dev --workspace=@kinetic/site-03-glsl",
+    "dev:pixi": "npm run dev --workspace=@kinetic/site-04-pixi",
+    "dev:webgpu": "npm run dev --workspace=@kinetic/site-05-webgpu",
+    "dev:hybrid": "npm run dev --workspace=@kinetic/site-06-hybrid",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@kinetic/telemetry-hud",
+  "version": "1.0.0",
+  "description": "Zero-overhead real-time telemetry HUD for graphics and creative animation",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite demo",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

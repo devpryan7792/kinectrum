@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Kinetic Spectrum // Telemetry Rig Test</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background: #0A0A0C;
+        color: #F6F3EC;
+        font-family: ui-monospace, 'JetBrains Mono', monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .test-panel {
+        background: #1A1B26;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 24px;
+        max-width: 520px;
+        width: 90%;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      }
+      h1 { font-size: 16px; letter-spacing: 0.1em; color: #7AA2F7; margin-bottom: 12px; }
+      p { font-size: 12px; color: #A9B1D6; line-height: 1.6; margin-bottom: 16px; }
+      .btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+      button {
+        background: #24283B;
+        border: 1px solid #414868;
+        color: #C0CAF5;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 11px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+      button:hover { background: #414868; border-color: #7AA2F7; }
+      canvas.test-canvas {
+        margin-top: 16px;
+        width: 100%;
+        height: 120px;
+        background: #000;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test-panel">
+      <h1>THE KINETIC SPECTRUM // HARNESS</h1>
+      <p>Epoch 0 verification harness: Real-time WebGL draw call interception, 60fps delta sampling, and TokyoNight telemetry HUD.</p>
+      <canvas class="test-canvas" id="glcanvas"></canvas>
+      <div class="btn-group">
+        <button id="btn-draws">+10 Draw Calls</button>
+        <button id="btn-stall">Simulate 30ms Stall</button>
+        <button id="btn-sub-gsap">Substrate: GSAP</button>
+        <button id="btn-sub-three">Substrate: Three.js</button>
+        <button id="btn-sub-glsl">Substrate: GLSL</button>
+      </div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
