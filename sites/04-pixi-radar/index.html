@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 · PIXI.JS V8 CYBERNETIC RADAR // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="canvas-container">
+      <canvas id="pixi-canvas"></canvas>
+    </div>
+
+    <div class="hud-overlay">
+      <header class="hud-header">
+        <div class="hud-brand">
+          <div class="hud-brand-title">THE KINETIC SPECTRUM // SPECIMEN 04</div>
+          <div class="hud-brand-sub">SUBSTRATE: 2D GPU BATCHING & PARTICLE SYMPHONY (PIXI.JS V8)</div>
+        </div>
+
+        <div class="hud-controls">
+          <button class="btn-ctrl" id="btn-audio-toggle">AUDIO: ON</button>
+          <button class="btn-ctrl" id="btn-shockwave">TRIGGER SHOCKWAVE</button>
+        </div>
+      </header>
+
+      <footer class="hud-footer">
+        <div class="hud-spec-block">
+          <div>BATCH STRATEGY: <b>UNIFIED VECTOR ATLAS (≤ 3 DRAWS)</b></div>
+          <div>SIMULATION MEMORY: <b>CONTIGUOUS FLOAT32ARRAY</b></div>
+          <div>ACTIVE NODES: <b id="lbl-active-nodes">20,000 NODES</b></div>
+        </div>
+
+        <div class="hud-sliders">
+          <div class="slider-unit">
+            <span>NODE DENSITY:</span>
+            <input type="range" id="slider-density" min="5000" max="50000" step="1000" value="20000" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

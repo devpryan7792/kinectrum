@@ -1,0 +1,20 @@
+{
+  "name": "@kinetic/site-04-pixi",
+  "version": "1.0.0",
+  "description": "Epoch 4: Pixi.js v8 Cybernetic Vector Radar (2D GPU Batching & 50k Sprite Swarm)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetic/telemetry-hud": "*",
+    "pixi.js": "^8.7.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}
