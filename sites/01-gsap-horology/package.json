@@ -1,0 +1,20 @@
+{
+  "name": "@kinetic/site-01-gsap",
+  "version": "1.0.0",
+  "description": "Epoch 1: GSAP & SVG Haute Horlogerie (Swiss Typographic & Kinetic Chronometer)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kinetic/telemetry-hud": "*",
+    "gsap": "^3.12.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

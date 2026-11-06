@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 · GSAP HAUTE HOROLOGY // The Kinetic Spectrum</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="k-viewport-grid"></div>
+    <div class="k-vignette"></div>
+
+    <div id="app">
+      <header class="k-header">
+        <div class="k-brand-block">
+          <div class="k-brand-title">THE KINETIC SPECTRUM // SPECIMEN 01</div>
+          <div class="k-brand-tag">SUBSTRATE: DOM & SVG COMPOSITOR CHOREOGRAPHY (GSAP 3)</div>
+        </div>
+
+        <div class="k-mode-selector">
+          <button class="k-btn-mode active" data-view="blueprint">BLUEPRINT</button>
+          <button class="k-btn-mode" data-view="exploded">EXPLODED</button>
+          <button class="k-btn-mode" data-view="specimen">SPECIMEN</button>
+          <button class="k-btn-mode" id="btn-stress-toggle" title="Stress test 250 concurrent SVG path animations">⚡ 250-PATH STRESS</button>
+        </div>
+      </header>
+
+      <main class="k-stage">
+        <div class="k-monument-wrap"></div>
+        <div class="k-chronometer-wrap"></div>
+      </main>
+
+      <footer class="k-footer">
+        <div class="k-scrub-controls">
+          <span class="k-scrub-label">[SCRUB TIMELINE]</span>
+          <input type="range" class="k-scrub-slider" id="timeline-scrub" min="0" max="1" step="0.001" value="0" />
+        </div>
+
+        <div class="k-telemetry-badge-group">
+          <div class="k-telemetry-badge">SUBSTRATE: <b>DOM/SVG</b></div>
+          <div class="k-telemetry-badge">WEBGL DRAWS: <b>0</b></div>
+          <div class="k-telemetry-badge">REFLOWS: <b>0 (COMPOSITOR-ONLY)</b></div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

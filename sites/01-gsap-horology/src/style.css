@@ -1,0 +1,348 @@
+/* Swiss Haute Horlogerie Styling // The Kinetic Spectrum */
+
+:root {
+  --bg-obsidian: #0A0A0C;
+  --bg-slate: #14151B;
+  --text-bone: #F6F3EC;
+  --text-muted: #7E8294;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --accent-vermilion: #FF3300;
+  --accent-phosphor: #9ECE6A;
+  --accent-blue: #7AA2F7;
+  --accent-gold: #E0AF68;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-obsidian);
+  color: var(--text-bone);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Millimeter Engineering Grid Background */
+.k-viewport-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(var(--hairline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.k-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(10, 10, 12, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Master Layout */
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+  z-index: 10;
+}
+
+/* Header Bar */
+.k-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 16px;
+}
+
+.k-brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.k-brand-title {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-blue);
+}
+
+.k-brand-tag {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.k-mode-selector {
+  display: flex;
+  gap: 8px;
+  background: rgba(20, 21, 27, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 4px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.k-btn-mode {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: all 0.15s ease;
+}
+
+.k-btn-mode:hover {
+  color: var(--text-bone);
+}
+
+.k-btn-mode.active {
+  background: var(--accent-blue);
+  color: #0A0A0C;
+  font-weight: 700;
+}
+
+.k-btn-mode.stress-active {
+  background: var(--accent-vermilion);
+  color: #FFFFFF;
+  font-weight: 700;
+  animation: pulse-vermilion 1.5s infinite;
+}
+
+@keyframes pulse-vermilion {
+  0%, 100% { box-shadow: 0 0 12px rgba(255, 51, 0, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(255, 51, 0, 0.8); }
+}
+
+/* Center Stage */
+.k-stage {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.k-monument-wrap {
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.k-type-monument {
+  display: flex;
+  flex-direction: column;
+}
+
+.k-type-eyebrow {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+}
+
+.k-type-title {
+  font-size: clamp(2.5rem, 6vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--text-bone);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.k-char {
+  transition: color 0.2s ease;
+}
+.k-char:hover {
+  color: var(--accent-blue);
+}
+
+.k-type-sub {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.k-type-meta {
+  display: flex;
+  gap: 12px;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  color: #565F89;
+}
+
+/* Chronometer Container */
+.k-chronometer-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* SVG Vector Craft */
+.k-chronometer-svg {
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+}
+
+.k-svg-ring {
+  fill: none;
+  stroke: var(--hairline);
+  stroke-width: 1px;
+}
+
+.k-ring-chassis {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-dasharray: 4 8;
+}
+
+.k-svg-ticks {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 0.85px;
+}
+.k-scale-minor {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 0.5px;
+}
+
+.k-svg-gear {
+  fill: rgba(20, 21, 27, 0.4);
+  stroke: var(--text-bone);
+  stroke-width: 1.1px;
+  transition: stroke 0.3s ease;
+}
+.k-gear-ring-1 {
+  stroke: #7AA2F7;
+  stroke-width: 1.2px;
+}
+.k-gear-planet {
+  stroke: #C0CAF5;
+  stroke-width: 1.1px;
+}
+.k-gear-escapement {
+  stroke: var(--accent-vermilion);
+  stroke-width: 1.4px;
+  fill: rgba(255, 51, 0, 0.08);
+}
+
+.k-svg-hairspring {
+  fill: none;
+  stroke: var(--accent-gold);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+}
+
+.k-svg-crosshair {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 0.75px;
+  stroke-dasharray: 2 4;
+}
+
+.k-svg-jewel {
+  fill: var(--accent-vermilion);
+  stroke: #FFFFFF;
+  stroke-width: 1px;
+  box-shadow: 0 0 12px var(--accent-vermilion);
+}
+
+.k-stress-tooth {
+  fill: none;
+  stroke: var(--accent-vermilion);
+  stroke-width: 1.2px;
+  stroke-linecap: round;
+  opacity: 0.75;
+}
+
+/* Scrub Controller Footer */
+.k-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 16px;
+}
+
+.k-scrub-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  max-width: 520px;
+}
+
+.k-scrub-label {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent-blue);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.k-scrub-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  outline: none;
+}
+.k-scrub-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--accent-blue);
+}
+
+.k-telemetry-badge-group {
+  display: flex;
+  gap: 12px;
+}
+
+.k-telemetry-badge {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 9px;
+  padding: 4px 8px;
+  background: rgba(20, 21, 27, 0.8);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+.k-telemetry-badge b {
+  color: var(--accent-phosphor);
+}
